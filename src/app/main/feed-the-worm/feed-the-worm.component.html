@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Feed The Worm</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Earworm</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <div id="container">
+    <br>
+    <ion-text>
+      Do you know the genre of your earworm?
+    </ion-text>
+    <br>
+    <br>
+    <mat-form-field>
+      <mat-label>Genre</mat-label>
+      <mat-select [formControl]="genres" multiple>
+        <mat-option *ngFor="let genre of genreList" [value]="genre">{{genre}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <br>
+    <br>
+    <ion-text>
+      Do you know when your earworm was born?
+    </ion-text>
+    <br>
+    <br>
+    <mat-form-field>
+      <mat-label>Decade</mat-label>
+      <mat-select [formControl]="decades" multiple>
+        <mat-option *ngFor="let decade of decadeList" [value]="decade">{{decade}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</ion-content>
