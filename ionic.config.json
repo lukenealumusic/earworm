@@ -1,0 +1,7 @@
+{
+  "name": "Earworm",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
